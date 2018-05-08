@@ -85,10 +85,6 @@ namespace FloatingBrowser
                     }
                 }
             }
-            else if (Regex.IsMatch(url, "[A-Za-z0-9-_]{11}"))
-            {
-                url = "https://youtube.com/embed/"+url;
-            }
 
             Debug.WriteLine(url);
             
