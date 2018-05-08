@@ -19,7 +19,7 @@
     <Grid Background="{ThemeResource HostBackdropBrush}" >
         <WebView Visibility="Collapsed" x:Name="webView" />
         <StackPanel x:Name="initialPanel">
-            <TextBox x:Name="urlBox" PlaceholderText="https://example.com" />
+            <TextBox x:Name="urlBox" KeyDown="urlBox_KeyDown" PlaceholderText="https://example.com" />
             <Button Click="Button_Click" Content="Open" HorizontalAlignment="Center" Margin="10" />
         </StackPanel>
     </Grid>
