@@ -5,10 +5,22 @@
     xmlns:local="using:FloatingBrowser"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    xmlns:media="using:Windows.UI.Xaml.Media"
+    mc:Ignorable="d">
 
-    <Grid>
-
+    <Page.Resources>
+        <media:AcrylicBrush x:Key="HostBackdropBrush"
+                            BackgroundSource="HostBackdrop"
+                            TintColor="LightGray"
+                            TintOpacity="0.4"
+                            FallbackColor="LightGray" />
+    </Page.Resources>
+    
+    <Grid Background="{ThemeResource HostBackdropBrush}" >
+        <WebView Visibility="Collapsed" x:Name="webView" />
+        <StackPanel x:Name="initialPanel">
+            <TextBox x:Name="urlBox" PlaceholderText="https://example.com" />
+            <Button Click="Button_Click" Content="Open" HorizontalAlignment="Center" Margin="10" />
+        </StackPanel>
     </Grid>
 </Page>
