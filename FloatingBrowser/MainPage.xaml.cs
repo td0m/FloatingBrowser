@@ -73,7 +73,7 @@ namespace FloatingBrowser
             var matches = Regex.Matches(urlBox.Text, youtubeUrlPattern, RegexOptions.IgnoreCase);
             var regex = new Regex(youtubeUrlPattern);
 
-            if (Regex.IsMatch(urlBox.Text, youtubeUrlPattern, RegexOptions.IgnoreCase))
+            if (Regex.IsMatch(url, youtubeUrlPattern, RegexOptions.IgnoreCase))
             {
                 var groups = regex.Match(url).Groups;
 
@@ -84,6 +84,10 @@ namespace FloatingBrowser
                         url = "https://youtube.com/embed/"+groups[groupName].Value;
                     }
                 }
+            }
+            else if (Regex.IsMatch(url, "[A-Za-z0-9-_]{11}"))
+            {
+                url = "https://youtube.com/embed/"+url;
             }
 
             Debug.WriteLine(url);
