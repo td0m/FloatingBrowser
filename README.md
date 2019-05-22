@@ -1,3 +1,3 @@
 # FloatingBrowser
 
-![docs/header.png](https://github.com/foreggs/FloatingBrowser/blob/master/docs/header.pngg)
+![docs/header.png](https://github.com/foreggs/FloatingBrowser/blob/master/docs/header.png)
